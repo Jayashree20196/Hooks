@@ -3,8 +3,18 @@ import './App.css';
 
 /*functional component */
 function App() {
+  //calling the secondComponent
+  return (
+    <SecondComponent/>
+  )
+}
+
+
+/* Second functional component called from its parent */
+function SecondComponent() {
+
   //declare a const with a string
-  const sampleText = "This is the begining of react hooks"
+  const sampleText = "This is displayed in the second component"
 
   //const is directly returned
   return (
