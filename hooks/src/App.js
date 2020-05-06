@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
-/*functional oarent component */
+/*functional parent component */
 function App() {
   
-  //declare a const with a string
-  const childText = "Text that needed to be passed to child component"
-
-  //calling the ChildComponent where the text is passed as props
+  //calling the ChildComponent
   return (
-    <ChildComponent text={childText}/>
+    <ChildComponent/>
   )
 }
 
 
 /* child functional component called from its parent along with props */
-function ChildComponent(props) {
+function ChildComponent() {
 
-  //props hold the text and displayed
+  //using useState storing the value in const
+  const [useStateText, useStateSetting] = useState(
+    "This text is displayed using useState"
+  )
+
+  //text is displayed from useState
   return (
     <div className="App">
-      <h1>{props.text}</h1>
+      <h1>{useStateText}</h1>
     </div>
   );
 }
