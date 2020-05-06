@@ -1,0 +1,22 @@
+What is react hooks?
+
+1. Its a feature in react introduced from the react verison 16.8.
+2. Hooks enables to write entire react application with functional components by allowing state.
+
+Why it is used ?
+
+Hooks are used in react functional components to use State and lifecycle methods in functional components 
+without writing class.
+
+Why we need Hooks ? 
+
+we can get the state of the component so that it can be easily tested and reused.
+we can facilitate the exchange of links between components or our entire application using hooks. 
+Hooks allow you to encapsulate logic without affecting the hierarchy of components.
+
+What is necessary to know before starting with hooks ?
+
+1. Javascript Closure
+2. Functional Components in react.
+3. Higher Order Components.
+4. Render Props
