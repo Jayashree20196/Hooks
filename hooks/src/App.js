@@ -1,25 +1,26 @@
 import React from 'react';
 import './App.css';
 
-/*functional component */
+/*functional oarent component */
 function App() {
-  //calling the secondComponent
+  
+  //declare a const with a string
+  const childText = "Text that needed to be passed to child component"
+
+  //calling the ChildComponent where the text is passed as props
   return (
-    <SecondComponent/>
+    <ChildComponent text={childText}/>
   )
 }
 
 
-/* Second functional component called from its parent */
-function SecondComponent() {
+/* child functional component called from its parent along with props */
+function ChildComponent(props) {
 
-  //declare a const with a string
-  const sampleText = "This is displayed in the second component"
-
-  //const is directly returned
+  //props hold the text and displayed
   return (
     <div className="App">
-      <h1>{sampleText}</h1>
+      <h1>{props.text}</h1>
     </div>
   );
 }
