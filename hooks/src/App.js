@@ -2,31 +2,22 @@ import React, { useState } from 'react';
 
 /* funtional parent component */
 function App (){
-  //setting const with default text
-  //parentText is used to set the input value
-  const [parentText, setparentText] = useState(
-    'This text is passed through callback method from parent!'
-  );
+  //setting const with default count value as 0
+  //setCount is used to set the value based on onclick method
+  const [count, setCount] = useState(0);
 
-  //declaring seperate onchange method
-  const handleparentText = (event) => setparentText(event.target.value)
+  //add method to add the count by 1
+  const handleAdd = () => setCount(counter => counter + 1);
 
-  return <ChildComponent parentText={parentText} onChangeParent={handleparentText}/>;
-};
- 
-/* funtional child component */
-//the child functional component receives a call back method as a param from parent
-function ChildComponent({parentText, onChangeParent}) {
+  //subtract method to subtract the count by 1
+  const handleSubtract = () => setCount(counter => counter - 1);
   return (
-    <div>
-      <h1>{parentText}</h1>
-      <input
-        type="text"
-        value={parentText}
-        onChange={onChangeParent}
-      />
-    </div>
+<div>
+ <h1>{count}</h1>
+ <button onClick={handleAdd}>add</button>
+ <button onClick={handleSubtract}>subtract</button>
+</div>
   );
 };
- 
+
 export default App;
